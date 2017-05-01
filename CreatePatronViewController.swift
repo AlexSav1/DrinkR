@@ -16,8 +16,6 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
     
-    var patronsBirthday: String?    
-    
 //MARK: VC Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +68,15 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let datalex = formatter.string(from: birthdayDatePicker.date)
+        print(datalex)
         print(birthdayDatePicker.date)
         
-        if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && patronsBirthday != nil){
+        if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != ""){
             
-            let newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: patronsBirthday!)
+            let newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: datalex)
             
             if let image = imageView.image{
                 newPatron.photo = image
