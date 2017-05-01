@@ -8,11 +8,8 @@
 
 import UIKit
 
-
-
-class Event: NSObject {
-
-    enum Recurring {
+class Event {
+    enum Recurring: Int {
         case oneTime
         case daily
         case weekly
@@ -27,5 +24,4 @@ class Event: NSObject {
         self.dateAndTime = date
         self.recurring = recurring
     }
-    
 }

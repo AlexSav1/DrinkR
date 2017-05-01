@@ -50,7 +50,7 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             picker.dismiss(animated: true, completion: {
                 
@@ -74,9 +74,10 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
         print(datalex)
         print(birthdayDatePicker.date)
         
+
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != ""){
             
-            let newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: datalex)
+            var newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: datalex)
             
             if let image = imageView.image{
                 newPatron.photo = image
