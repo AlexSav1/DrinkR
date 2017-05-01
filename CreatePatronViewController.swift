@@ -16,7 +16,16 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
     
-    var patronsBirthday: String?    
+    var patronsBirthday: String?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
+    
+    override func loadView() {
+        super.loadView()
+    }
     
 //MARK: VC Life Cycle Methods
     override func viewDidLoad() {
@@ -52,7 +61,7 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             picker.dismiss(animated: true, completion: {
                 
@@ -73,8 +82,8 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
         print(birthdayDatePicker.date)
         
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && patronsBirthday != nil){
-            
-            let newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: patronsBirthday!)
+
+            var newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: patronsBirthday!)
             
             if let image = imageView.image{
                 newPatron.photo = image
