@@ -18,6 +18,8 @@ class CreateBarViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var barDescriptionTextView: UITextView!
     
+    let dao = DAO.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,29 +54,47 @@ class CreateBarViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+    
     @IBAction func donePressed(_ sender: Any) {
         
-        if(barNameTextField.text != "" && addressTextField.text != "" && websiteTextField.text != "" && emailTextField.text != "" && phoneTextField.text != "" && barDescriptionTextView.text != ""){
-            
-            //guard let barWebsiteString = websiteTextField.text else { return }
-            
-            let barURL = URL(string: websiteTextField.text!)
-            
-            if(barURL == nil){
-                
-            }
-            
-            var newBar = Bar(name: barNameTextField.text, address: addressTextField.text, website: barURL, email: emailTextField.text, phoneNumber: phoneTextField.text, description: barDescriptionTextView.text)
-            
-        } else{
-            
+        guard let barNameInput = barNameTextField.text,
+        let addressInput = addressTextField.text,
+        let websiteInput = websiteTextField.text,
+        let emailInput = emailTextField.text,
+        let phoneInput = phoneTextField.text,
+        let descriptionInput = barDescriptionTextView.text
+        else {
             let needCorrectText = UIAlertController(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
+            needCorrectText.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(needCorrectText, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
+        
+        
+        
+        let barURL = URL(string: websiteTextField.text!)
+        
+        if barURL == nil {
+            
+            let needCorrectText = UIAlertController(title: "Error", message: "Please enter a URL in the website field", preferredStyle: .alert)
             
             needCorrectText.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             
             self.present(needCorrectText, animated: true, completion: nil)
             
+            
+            
+            let newBar = Bar(name: barNameTextField.text, address: addressTextField.text, website: barURL, email: emailTextField.text, phoneNumber: phoneTextField.text, description: barDescriptionTextView.text)
+            
+            dao.barsArray.append(newBar)
+            
+            
         }
+        
+        
         
     }
     

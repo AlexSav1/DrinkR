@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA03DFA21EB91CA400B4D83D /* BarLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03DFA11EB91CA400B4D83D /* BarLandingViewController.swift */; };
 		AA79FBDA1EB92176009D337C /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA79FBD91EB92176009D337C /* Bar.swift */; };
+		AA79FBDC1EB9308F009D337C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA79FBDB1EB9308F009D337C /* DAO.swift */; };
 		FAA77C731EB29E3A00C4E329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA77C721EB29E3A00C4E329 /* AppDelegate.swift */; };
 		FAA77C781EB29E3A00C4E329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA77C761EB29E3A00C4E329 /* Main.storyboard */; };
 		FAA77C7A1EB29E3A00C4E329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA77C791EB29E3A00C4E329 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		AA03DFA11EB91CA400B4D83D /* BarLandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarLandingViewController.swift; sourceTree = "<group>"; };
 		AA79FBD91EB92176009D337C /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		AA79FBDB1EB9308F009D337C /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		FAA77C6F1EB29E3A00C4E329 /* DrinkR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA77C721EB29E3A00C4E329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA77C771EB29E3A00C4E329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FAA77C8A1EB4F56F00C4E329 /* CreateEventViewController.swift */,
 				AA03DFA11EB91CA400B4D83D /* BarLandingViewController.swift */,
 				FAA77C761EB29E3A00C4E329 /* Main.storyboard */,
+				AA79FBDB1EB9308F009D337C /* DAO.swift */,
 				FAA77C841EB2A26900C4E329 /* Patron.swift */,
 				AA79FBD91EB92176009D337C /* Bar.swift */,
 				FAA77C8C1EB4FF9500C4E329 /* Event.swift */,
@@ -160,6 +163,7 @@
 				FAA77C851EB2A26900C4E329 /* Patron.swift in Sources */,
 				AA03DFA21EB91CA400B4D83D /* BarLandingViewController.swift in Sources */,
 				FAA77C8B1EB4F56F00C4E329 /* CreateEventViewController.swift in Sources */,
+				AA79FBDC1EB9308F009D337C /* DAO.swift in Sources */,
 				FAA77C871EB2A54F00C4E329 /* CreatePatronViewController.swift in Sources */,
 				FAA77C8D1EB4FF9500C4E329 /* Event.swift in Sources */,
 				FAA77C891EB4F17800C4E329 /* InitialViewController.swift in Sources */,

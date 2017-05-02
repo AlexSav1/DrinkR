@@ -56,8 +56,8 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
                 
                 self.imageView.image = image
                 
-//                let imageData = UIImageJPEGRepresentation(image, 1.0)
-//                self.dao.putImageInStorage(nameOfFile: "sample", imageData: imageData!)
+                //                let imageData = UIImageJPEGRepresentation(image, 1.0)
+                //                self.dao.putImageInStorage(nameOfFile: "sample", imageData: imageData!)
             })
         }
     }
