@@ -59,9 +59,7 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
 //                let imageData = UIImageJPEGRepresentation(image, 1.0)
 //                self.dao.putImageInStorage(nameOfFile: "sample", imageData: imageData!)
             })
-            
         }
-        
     }
     
     
@@ -70,14 +68,14 @@ class CreatePatronViewController: UIViewController, UIImagePickerControllerDeleg
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
-        let datalex = formatter.string(from: birthdayDatePicker.date)
-        print(datalex)
+        let birthDate = formatter.string(from: birthdayDatePicker.date)
+        print(birthDate)
         print(birthdayDatePicker.date)
         
 
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != ""){
             
-            var newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: datalex)
+            var newPatron = Patron(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, birthday: birthDate)
             
             if let image = imageView.image{
                 newPatron.photo = image
