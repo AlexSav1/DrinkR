@@ -20,6 +20,8 @@
 		FAA77C8B1EB4F56F00C4E329 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA77C8A1EB4F56F00C4E329 /* CreateEventViewController.swift */; };
 		FAA77C8D1EB4FF9500C4E329 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA77C8C1EB4FF9500C4E329 /* Event.swift */; };
 		FAA77C8F1EB5363200C4E329 /* CreateBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA77C8E1EB5363200C4E329 /* CreateBarViewController.swift */; };
+		FABFEF0B1EBA9D2B0075C0DA /* EventLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFEF0A1EBA9D2B0075C0DA /* EventLandingViewController.swift */; };
+		FABFEF0D1EBA9F750075C0DA /* PatronLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFEF0C1EBA9F750075C0DA /* PatronLandingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FAA77C8A1EB4F56F00C4E329 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		FAA77C8C1EB4FF9500C4E329 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FAA77C8E1EB5363200C4E329 /* CreateBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBarViewController.swift; sourceTree = "<group>"; };
+		FABFEF0A1EBA9D2B0075C0DA /* EventLandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventLandingViewController.swift; path = ../EventLandingViewController.swift; sourceTree = "<group>"; };
+		FABFEF0C1EBA9F750075C0DA /* PatronLandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatronLandingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				FAA77C8E1EB5363200C4E329 /* CreateBarViewController.swift */,
 				FAA77C8A1EB4F56F00C4E329 /* CreateEventViewController.swift */,
 				AA03DFA11EB91CA400B4D83D /* BarLandingViewController.swift */,
+				FABFEF0C1EBA9F750075C0DA /* PatronLandingViewController.swift */,
+				FABFEF0A1EBA9D2B0075C0DA /* EventLandingViewController.swift */,
 				FAA77C761EB29E3A00C4E329 /* Main.storyboard */,
 				AA79FBDB1EB9308F009D337C /* DAO.swift */,
 				FAA77C841EB2A26900C4E329 /* Patron.swift */,
@@ -161,11 +167,13 @@
 			files = (
 				FAA77C731EB29E3A00C4E329 /* AppDelegate.swift in Sources */,
 				FAA77C851EB2A26900C4E329 /* Patron.swift in Sources */,
+				FABFEF0B1EBA9D2B0075C0DA /* EventLandingViewController.swift in Sources */,
 				AA03DFA21EB91CA400B4D83D /* BarLandingViewController.swift in Sources */,
 				FAA77C8B1EB4F56F00C4E329 /* CreateEventViewController.swift in Sources */,
 				AA79FBDC1EB9308F009D337C /* DAO.swift in Sources */,
 				FAA77C871EB2A54F00C4E329 /* CreatePatronViewController.swift in Sources */,
 				FAA77C8D1EB4FF9500C4E329 /* Event.swift in Sources */,
+				FABFEF0D1EBA9F750075C0DA /* PatronLandingViewController.swift in Sources */,
 				FAA77C891EB4F17800C4E329 /* InitialViewController.swift in Sources */,
 				AA79FBDA1EB92176009D337C /* Bar.swift in Sources */,
 				FAA77C8F1EB5363200C4E329 /* CreateBarViewController.swift in Sources */,
